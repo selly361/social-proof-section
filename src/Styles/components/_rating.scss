@@ -1,0 +1,17 @@
+@use "Styles/utilities" as *;
+
+.rating {
+    width: 455px;
+    height: 57px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    border-radius: 7px;
+    background: $Light-Grayish-Magenta;
+    padding: 16px 20px;
+
+    &__rate-description {
+        color: $Very-Dark-Magenta;
+        font-weight: 700;
+    }
+}
