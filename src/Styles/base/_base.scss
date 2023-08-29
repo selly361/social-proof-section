@@ -1,0 +1,22 @@
+@use "Styles/utilities" as *;
+
+
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 140px 60px 90px 60px;
+    background: url("../../../public/images/bg-pattern-top-desktop.svg"), url("../../../public/images/bg-pattern-bottom-desktop.svg");
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+}
+
+
+
+@include breakpoint(sm) {
+    body {
+        padding: 78px 16px 0 24px;
+        background: url("../../../public/images/bg-pattern-top-mobile.svg"), url("../../../public/images/bg-pattern-bottom-mobile.svg");
+    }
+}
