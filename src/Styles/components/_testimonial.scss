@@ -1,0 +1,66 @@
+@use "Styles/utilities" as *;
+
+
+.testimonial {
+    height: 240px;
+    width: 380px;
+    background: $Very-Dark-Magenta;
+    border-radius: 7px;
+    padding: 40px 45px 40px 34px;
+
+    display: grid;
+    gap: 30px;
+
+    &__container {
+        height: max-content;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+
+        &__sub-container {
+            height: max-content;
+
+            &__name {
+                font-size: 0.9375rem;
+                color: $White;
+                font-weight: 700;
+
+            }
+
+            &__tag {
+                color: $Soft-Pink;
+
+            }
+        }
+
+        &__image {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+        }
+
+    }
+
+    &__message {
+        color: $White;
+        font-size: 0.9375rem
+    }
+
+    &:nth-child(1) {
+        animation: testimonial-slide 1s;
+        align-self: top;
+    }
+
+
+    &:nth-child(2) {
+        animation: testimonial-slide 1.5s;
+        align-self: center;
+    }
+
+
+    &:nth-child(3) {
+        animation: testimonial-slide 2s;
+        align-self: end;
+    }
+}
