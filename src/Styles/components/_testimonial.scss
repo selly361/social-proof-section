@@ -3,7 +3,7 @@
 
 .testimonial {
     height: 240px;
-    width: 380px;
+    max-width: 380px;
     background: $Very-Dark-Magenta;
     border-radius: 7px;
     padding: 40px 45px 40px 34px;
@@ -25,12 +25,17 @@
                 font-size: 0.9375rem;
                 color: $White;
                 font-weight: 700;
-
             }
 
             &__tag {
                 color: $Soft-Pink;
 
+            }
+
+            @include breakpoint(sm) {
+                &__name, &__tag {
+                    font-size: 0.75rem;
+                }
             }
         }
 
@@ -63,4 +68,21 @@
         animation: testimonial-slide 2s;
         align-self: end;
     }
+
+
+    @include breakpoint(sm) {
+        gap: 8px;
+
+
+
+        &__message {
+            font-size: 0.75rem;
+        }
+    }
+
+
+    @include breakpoint(md) {
+        min-height: 240px;
+    }
+
 }

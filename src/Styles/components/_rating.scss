@@ -14,4 +14,20 @@
         color: $Very-Dark-Magenta;
         font-weight: 700;
     }
+
+    @include breakpoint(md) {
+        width: 375px;
+
+
+        &__rate-description {
+            font-size: 0.75rem;
+        }
+    }
+
+    @include breakpoint(sm) {
+        width: 100%;
+        flex-flow: column;
+        height: max-content;
+        gap: 8px;
+    }
 }

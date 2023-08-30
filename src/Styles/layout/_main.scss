@@ -8,7 +8,8 @@
     &__top-section {
         display: flex;
         align-items: center;
-        height: 244px;
+        min-height: 244px;
+        min-width: 100%;
         justify-content: space-between;
 
 
@@ -29,6 +30,36 @@
                 line-height: 1.6;
                 margin-top: 10px;
             }
+
+
+            @include breakpoint(md) {
+                width: 100%;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+
+                &__heading {
+                    max-width: 100%;
+                    font-size: 2rem;
+                }
+
+                &__description {
+                    max-width: calc(100% - 72px);
+                    font-size: 0.75rem;
+                }
+            }
+
+
+            @include breakpoint(sm) {
+
+                &__heading {
+                    font-size: 1.5rem;;
+                }
+
+                &__description {
+                    max-width: 100%;
+                }
+            }
         }
 
 
@@ -41,23 +72,39 @@
 
             .rating:nth-child(1) {
                 justify-self: start;
-                animation: rating-slide 1s;;
+                animation: rating-slide 1s;
             }
 
-            
+
 
             .rating:nth-child(2) {
                 justify-self: center;
-                animation: rating-slide 1.5s;;
+                animation: rating-slide 1.5s;
             }
 
-            
+
 
             .rating:nth-child(3) {
                 justify-self: end;
                 animation: rating-slide 2s;
             }
 
+
+            @include breakpoint(md) {
+                width: 100%;
+                display: flex;
+                flex-flow: column;
+                gap: 30px;
+                align-items: center;
+            }
+        }
+
+
+
+        @include breakpoint(md){
+            flex-flow: column;
+            text-align: center;
+            gap: 50px;
         }
 
     }
@@ -66,9 +113,22 @@
 
     &__testimonial-section {
         width: 100%;
-        height: 280px;
+        min-height: 280px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+
+        @include breakpoint(md) {
+            display: flex;
+            flex-direction: column;
+
+            .testimonial {
+                align-self: unset;
+                min-width: 100%;
+            }
+
+        }
     }
 
 
