@@ -2,7 +2,7 @@
 
 ![](./public/desktop-design.jpg)
 
-### [Live Site](url)
+### [Live Site](https://social-proof-section-two-chi.vercel.app/)
 
 - [Social Proof Section](#social-proof-section)
     - [Live Site](#live-site)
