@@ -13,6 +13,23 @@ body {
 }
 
 
+/* Custom Scroll-bar */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10%;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: $Dark-Grayish-Magenta;
+  }
+
+
 
 @include breakpoint(sm) {
     body {
